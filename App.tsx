@@ -13,7 +13,7 @@ import {
   Switch,
   Box,
   Select,
-  CheckIcon
+  CheckIcon,
 } from 'native-base';
 interface FormValues {
   username: string;
@@ -85,31 +85,28 @@ const FormikExample = () => {
           <VStack width="80%" mx="auto">
             <FormControl>
               <FormControl>
-
                 <FormControl>
-                <Box
-                flexDirection="row"
-                alignItems="center"
-                justifyContent={'space-between'}>
-              <FormControl.Label>Account Type</FormControl.Label>
-              <Select
-                selectedValue={accountType}
-                minWidth="200"
-                height="30"
-                accessibilityLabel="Choose Account Type"
-                placeholder="Choose Account Type"
-                _selectedItem={{
-                  bg: 'teal.600',
-                  endIcon: <CheckIcon size="5" />,
-                }}
-                onValueChange={(nextValue) => setAccountType(nextValue)}
-              >
-                <Select.Item label="Advanced" value="advanced" />
-                <Select.Item label="Manual" value="manual" /> 
-              </Select>
-              </Box>
-            </FormControl>
-               
+                  <Box
+                    flexDirection="row"
+                    alignItems="center"
+                    justifyContent={'space-between'}>
+                    <FormControl.Label>Account Type</FormControl.Label>
+                    <Select
+                      selectedValue={accountType}
+                      minWidth="200"
+                      height="30"
+                      accessibilityLabel="Choose Account Type"
+                      placeholder="Choose Account Type"
+                      _selectedItem={{
+                        bg: 'teal.600',
+                        endIcon: <CheckIcon size="5" />,
+                      }}
+                      onValueChange={nextValue => setAccountType(nextValue)}>
+                      <Select.Item label="Advanced" value="advanced" />
+                      <Select.Item label="Manual" value="manual" />
+                    </Select>
+                  </Box>
+                </FormControl>
               </FormControl>
             </FormControl>
 
