@@ -67,7 +67,6 @@ const FormikExample = () => {
   const getValidationSchema = () => {
     return accountType === 'advanced' ? advancedSchema : basicSchema;
   };
-  // console.log(accountType)
   return (
     <NativeBaseProvider>
       <Formik<FormValues>
